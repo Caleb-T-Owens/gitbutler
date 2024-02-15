@@ -56,6 +56,7 @@
 		{:else}
 			<input
 				{id}
+                foo="Testaroni 2"
 				{readonly}
 				{required}
 				{placeholder}
