@@ -40,6 +40,7 @@
 		{/if}
 		{#if password}
 			<input
+				foo="testaroni 8"
 				{id}
 				{readonly}
 				{required}
