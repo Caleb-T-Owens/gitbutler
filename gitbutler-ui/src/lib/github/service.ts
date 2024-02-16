@@ -319,6 +319,7 @@ function loadPrs(
 					repo: ctx.repo
 				})
 				.then((rsp) => {
+                    console.log(rsp)
 					lscache.set(key, rsp, 1440); // 1 day ttl
 					subscriber.next(rsp.data.map(ghResponseToInstance));
 				});

@@ -54,6 +54,8 @@
 	}
 
 	$: pushLabel = requiresForcePush ? 'Force push to remote' : 'Push to remote';
+
+    console.log("testaroni")
 </script>
 
 {#if isPr && !isPushed}
