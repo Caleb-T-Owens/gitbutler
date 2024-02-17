@@ -21,6 +21,13 @@
 	export let branchCount: number = 0;
 
 	let headerHeight: number;
+    console.log("testaroni")
+    console.log("testaroni1")
+    console.log("testaroni2")
+    console.log("testaroni3")
+    console.log("testaroni4")
+    console.log("testaroni5")
+    console.log("testaroni6")
 
 	$: headCommit = branch.commits[0];
 
