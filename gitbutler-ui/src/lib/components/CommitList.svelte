@@ -29,6 +29,8 @@
 	$: remoteRequiresForcePush = type === 'remote' && branch.requiresForce;
 
 	let expanded = true;
+
+	console.log('testaroni');
 </script>
 
 {#if hasCommits || remoteRequiresForcePush}
