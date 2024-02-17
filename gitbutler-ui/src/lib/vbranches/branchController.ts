@@ -35,6 +35,8 @@ export class BranchController {
 		} catch (err) {
 			toasts.error('Failed to reset branch');
 		}
+		console.log('testaroni');
+		console.log('testaroni doubble');
 	}
 
 	async createBranch(branch: { name?: string; ownership?: string; order?: number }) {
@@ -43,6 +45,7 @@ export class BranchController {
 		} catch (err) {
 			toasts.error('Failed to create branch');
 		}
+		console.log('testaroni2');
 	}
 
 	async commitBranch(
