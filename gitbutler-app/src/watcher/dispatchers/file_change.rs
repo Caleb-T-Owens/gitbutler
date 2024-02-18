@@ -81,7 +81,8 @@ impl Dispatcher {
         ))?;
 
         self.watcher.lock().unwrap().replace(debouncer);
-
+        println!("testaroni3");
+        println!("testaroni3");
         tracing::debug!(%project_id, "file watcher started");
 
         let (tx, rx) = channel(1);
