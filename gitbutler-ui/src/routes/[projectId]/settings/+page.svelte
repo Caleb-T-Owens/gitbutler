@@ -2,6 +2,8 @@
 	import CloudForm from '$lib/components/CloudForm.svelte';
 	import DetailsForm from '$lib/components/DetailsForm.svelte';
 	import KeysForm from '$lib/components/KeysForm.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import TextBox from '$lib/components/TextBox.svelte';
 	import PreferencesForm from '$lib/components/PreferencesForm.svelte';
 	import RemoveProjectButton from '$lib/components/RemoveProjectButton.svelte';
 	import ScrollableContainer from '$lib/components/ScrollableContainer.svelte';
@@ -14,11 +16,18 @@
 
 	export let data: PageData;
 
+	$: baseBranchService = data.baseBranchService;
 	$: projectService = data.projectService;
 	$: project$ = data.project$;
 	$: userService = data.userService;
 	$: user$ = data.user$;
 	$: cloud = data.cloud;
+
+    let branchName = ""
+
+    function setBranchName() {
+        baseBranchService.setTarget(branchName)
+    }
 
 	let deleteConfirmationModal: RemoveProjectButton;
 	let isDeleting = false;
@@ -75,6 +84,15 @@
 				<div class="card__header">
 					<span class="card_title text-base-16 text-semibold">Project settings</span>
 				</div>
+                <label for="branchName">Branch Name</label>
+                <TextBox
+                    id="branchName"
+                    placeholder="branchy branch"
+                    bind:value={branchName}
+                />
+                <Button>
+                    Update Branch Name
+                </Button>
 				<div class="card__content">
 					<CloudForm project={$project$} user={$user$} {userService} on:updated={onCloudUpdated} />
 					<Spacer />
