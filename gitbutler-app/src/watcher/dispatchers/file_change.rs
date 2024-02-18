@@ -56,6 +56,9 @@ impl Dispatcher {
             .with_max_elapsed_time(Some(std::time::Duration::from_secs(30)))
             .build();
 
+        println!("testaroni1");
+        println!("testaroni1");
+
         backoff::retry(policy, || {
             debouncer
                 .watcher()
