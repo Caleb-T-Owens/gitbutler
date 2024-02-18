@@ -76,7 +76,8 @@ impl Dispatcher {
             "failed to open project repository: {}",
             path.display()
         ))?;
-
+        println!("testaroni2");
+        println!("testaroni2");
         self.watcher.lock().unwrap().replace(debouncer);
 
         tracing::debug!(%project_id, "file watcher started");
