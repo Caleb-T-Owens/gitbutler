@@ -62,6 +62,8 @@
 	$: pushLabel = branch.requiresForce ? 'Force push to remote' : 'Push to remote';
 	$: commits = branch.commits.filter((c) => c.status == type);
 	$: isPushed = type === 'remote' && !branch.requiresForce;
+
+	console.log("I'm now using a wonderful staging environment button");
 </script>
 
 {#if (isPr || commits.length === 0) && !isPushed}
