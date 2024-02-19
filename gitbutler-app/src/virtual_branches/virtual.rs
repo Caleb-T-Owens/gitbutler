@@ -3218,7 +3218,7 @@ pub fn squash(
             &commit_to_squash.author(),
             &commit_to_squash.committer(),
             &format!(
-                "{}\n{}",
+                "{}\n\n{}",
                 parent_commit.message().unwrap_or_default(),
                 commit_to_squash.message().unwrap_or_default(),
             ),
