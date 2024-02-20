@@ -7,6 +7,10 @@
 </script>
 
 <script lang="ts">
+    console.log("testaroni")
+    console.log("testaroni")
+    console.log("testaroni")
+    console.log("testaroni")
 	import Button from '$lib/components/Button.svelte';
 	import DropDownButton from '$lib/components/DropDownButton.svelte';
 	import ContextMenu from '$lib/components/contextmenu/ContextMenu.svelte';
@@ -24,6 +28,10 @@
 	export let wide = false;
 	export let branch: Branch;
 	export let isPr = false;
+    console.log("testaroni")
+    console.log("testaroni")
+    console.log("testaroni")
+    console.log("testaroni")
 
 	function defaultAction(projectId: string): Persisted<BranchAction> {
 		const key = 'projectDefaultAction_';
