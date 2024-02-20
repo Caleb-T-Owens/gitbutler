@@ -10,6 +10,7 @@ pub fn hunk_with_context(
     file_lines_before: &[&str],
     change_type: diff::ChangeType,
 ) -> Result<diff::Hunk> {
+    println!("{:?}", hunk_diff);
     let diff_lines = hunk_diff
         .lines()
         .map(std::string::ToString::to_string)
