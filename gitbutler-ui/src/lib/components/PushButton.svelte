@@ -29,6 +29,9 @@
 		const key = 'projectDefaultAction_';
 		return persisted<BranchAction>(BranchAction.Push, key + projectId);
 	}
+    console.log("testaroni1");
+    console.log("testaroni1");
+    console.log("testaroni1");
 
 	const dispatch = createEventDispatcher<{ trigger: { action: BranchAction } }>();
 	const preferredAction = defaultAction(projectId);
