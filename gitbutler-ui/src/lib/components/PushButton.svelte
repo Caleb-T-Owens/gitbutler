@@ -39,7 +39,9 @@
 	let contextMenu: ContextMenu;
 	let dropDown: DropDownButton;
 	let disabled = false;
-
+    console.log("testaroni3");
+    console.log("testaroni3");
+    console.log("testaroni3");
 	$: selection$ = contextMenu?.selection$;
 
 	let action!: BranchAction;
