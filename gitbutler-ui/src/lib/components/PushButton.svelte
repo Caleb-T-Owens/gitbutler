@@ -46,8 +46,9 @@
 		isPushed; // selectAction is dependant on isPushed
 		action = selectAction($preferredAction);
 	}
-
+    console.log("fooo")
 	function selectAction(preferredAction: BranchAction) {
+        console.log("barr")
 		if (isPushed && !githubEnabled) {
 			// TODO: Refactor such that this is not necessary
 			console.log('No push actions possible');
@@ -58,6 +59,7 @@
 		} else if (!githubEnabled) {
 			return BranchAction.Push;
 		}
+        console.log("bazz")
 		return preferredAction;
 	}
 
