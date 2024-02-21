@@ -24,7 +24,6 @@
 	export let wide = false;
 	export let branch: Branch;
 	export let isPr = false;
-
 	function defaultAction(projectId: string): Persisted<BranchAction> {
 		const key = 'projectDefaultAction_';
 		return persisted<BranchAction>(BranchAction.Push, key + projectId);
