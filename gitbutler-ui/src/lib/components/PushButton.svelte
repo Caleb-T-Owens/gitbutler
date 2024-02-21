@@ -16,6 +16,9 @@
 	import * as toasts from '$lib/utils/toasts';
 	import { createEventDispatcher } from 'svelte';
 	import type { Branch } from '$lib/vbranches/types';
+    console.log("testaroni");
+    console.log("testaroni");
+    console.log("testaroni");
 
 	export let projectId: string;
 	export let type: string;
