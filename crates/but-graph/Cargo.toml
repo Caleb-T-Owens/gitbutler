@@ -1,0 +1,37 @@
+[package]
+name = "but-graph"
+version = "0.0.0"
+edition = "2024"
+authors = ["GitButler <gitbutler@gitbutler.com>"]
+description = "Types to represent Git commit graphs as connected segments, and perform various operations on these."
+publish = false
+rust-version = "1.89"
+
+[lib]
+doctest = false
+test = false
+
+[features]
+legacy = ["dep:but-meta"]
+
+[dependencies]
+but-core.workspace = true
+but-meta = { workspace = true, optional = true, features = ["legacy"] }
+
+gix = { workspace = true, features = ["revision"] }
+bstr.workspace = true
+petgraph = { version = "0.8.3", default-features = false, features = ["stable_graph", "std"] }
+anyhow.workspace = true
+bitflags.workspace = true
+tracing.workspace = true
+itertools.workspace = true
+
+[dev-dependencies]
+but-meta.workspace = true
+but-testsupport.workspace = true
+
+gitbutler-reference.workspace = true
+
+gix-testtools.workspace = true
+insta = "1.43.2"
+

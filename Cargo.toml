@@ -1,101 +1,163 @@
 [workspace]
-members = [
-    "gitbutler-app",
-    "gitbutler-changeset",
-    "gitbutler-git",
-]
+members = ["crates/gitbutler-*", "crates/but-*", "crates/but"]
 resolver = "2"
 
 [workspace.dependencies]
-git2 = { version = "0.18.2", features = ["vendored-openssl", "vendored-libgit2"] }
-uuid = "1.7.0"
-serde = { version = "1.0", features = ["derive"] }
-thiserror = "1.0.57"
-rusqlite = { version = "0.29.0", features = [ "bundled", "blob" ] }
-tokio = { version = "1.36.0" }
+but = { path = "crates/but" }
+but-testsupport = { path = "crates/but-testsupport" }
+but-rebase = { path = "crates/but-rebase" }
+but-core = { path = "crates/but-core" }
+but-ctx = { path = "crates/but-ctx" }
+but-workspace = { path = "crates/but-workspace" }
+but-hunk-assignment = { path = "crates/but-hunk-assignment" }
+but-hunk-dependency = { path = "crates/but-hunk-dependency" }
+but-worktrees = { path = "crates/but-worktrees" }
+but-db = { path = "crates/but-db" }
+but-path = { path = "crates/but-path" }
+but-graph = { path = "crates/but-graph" }
+but-meta = { path = "crates/but-meta" }
+but-rules = { path = "crates/but-rules" }
+but-action = { path = "crates/but-action" }
+but-bot = { path = "crates/but-bot" }
+but-status = { path = "crates/but-status" }
+but-tools = { path = "crates/but-tools" }
+but-api = { path = "crates/but-api" }
+but-api-macros = { path = "crates/but-api-macros" }
+but-claude = { path = "crates/but-claude" }
+but-cursor = { path = "crates/but-cursor" }
+but-broadcaster = { path = "crates/but-broadcaster" }
+but-gerrit = { path = "crates/but-gerrit" }
+but-cherry-apply = { path = "crates/but-cherry-apply" }
+but-github = { path = "crates/but-github" }
+but-error = { path = "crates/but-error" }
+but-serde = { path = "crates/but-serde" }
+but-secret = { path = "crates/but-secret" }
+but-feedback = { path = "crates/but-feedback" }
+but-forge-storage = { path = "crates/but-forge-storage" }
+but-settings = { path = "crates/but-settings" }
+but-oxidize = { path = "crates/but-oxidize" }
+
+gitbutler-git = { path = "crates/gitbutler-git" }
+gitbutler-watcher = { path = "crates/gitbutler-watcher" }
+gitbutler-filemonitor = { path = "crates/gitbutler-filemonitor" }
+gitbutler-testsupport = { path = "crates/gitbutler-testsupport" }
+gitbutler-branch-actions = { path = "crates/gitbutler-branch-actions" }
+gitbutler-sync = { path = "crates/gitbutler-sync" }
+gitbutler-oplog = { path = "crates/gitbutler-oplog" }
+gitbutler-repo = { path = "crates/gitbutler-repo" }
+gitbutler-repo-actions = { path = "crates/gitbutler-repo-actions" }
+gitbutler-command-context = { path = "crates/gitbutler-command-context" }
+gitbutler-project = { path = "crates/gitbutler-project" }
+gitbutler-user = { path = "crates/gitbutler-user" }
+gitbutler-branch = { path = "crates/gitbutler-branch" }
+gitbutler-reference = { path = "crates/gitbutler-reference" }
+gitbutler-storage = { path = "crates/gitbutler-storage" }
+gitbutler-fs = { path = "crates/gitbutler-fs" }
+gitbutler-time = { path = "crates/gitbutler-time" }
+gitbutler-commit = { path = "crates/gitbutler-commit" }
+gitbutler-url = { path = "crates/gitbutler-url" }
+gitbutler-diff = { path = "crates/gitbutler-diff" }
+gitbutler-operating-modes = { path = "crates/gitbutler-operating-modes" }
+gitbutler-edit-mode = { path = "crates/gitbutler-edit-mode" }
+gitbutler-cherry-pick = { path = "crates/gitbutler-cherry-pick" }
+gitbutler-stack = { path = "crates/gitbutler-stack" }
+gitbutler-forge = { path = "crates/gitbutler-forge" }
+gitbutler-hunk-dependency = { path = "crates/gitbutler-hunk-dependency" }
+gitbutler-workspace = { path = "crates/gitbutler-workspace" }
+
+bstr = "1.12.1"
+# Add the `tracing` or `tracing-detail` features to see more of gitoxide in the logs. Useful to see which programs it invokes.
+gix = { version = "0.74.0", git = "https://github.com/GitoxideLabs/gitoxide", branch = "main", default-features = false, features = [
+] }
+gix-testtools = "0.16.1"
+insta = "1.43.2"
+git2 = { version = "0.20.0", features = [
+    "vendored-openssl",
+    "vendored-libgit2",
+] }
+uuid = { version = "1.18.1", features = ["v4", "serde"] }
+serde = { version = "1.0", features = ["derive", "std"] }
+serde_json = "1.0.145"
+thiserror = "2.0.17"
+tokio = { version = "1.47.1", default-features = false }
+keyring = { version = "3.6.3", features = [
+    "apple-native",
+    "windows-native",
+    "linux-native-sync-persistent",
+    "crypto-rust",
+] }
+anyhow = "1.0.100"
+parking_lot = "0.12.4"
+futures = "0.3.31"
+toml = "0.9.5"
+tracing = "0.1.41"
+tracing-subscriber = "0.3.20"
+tempfile = "3.23"
+rand = "0.9.2"
+notify-rust = "4.11.7"
+git2-hooks = { version = "0.5.0" }
+itertools = "0.14.0"
+dirs = "6.0.0"
+rmcp = { version = "0.8.3", default-features = false, features = [
+    "base64",
+    "server",
+    "macros",
+] }
+serde_json_lenient = "0.2.3"
+reqwest = { version = "0.12.24", default-features = false, features = [
+    "rustls-tls",
+] }
+chrono = { version = "0.4.42", default-features = false, features = ["std"] }
+md5 = "0.8.0"
+bitflags = "2.9.4"
+notify = "8.2.0"
+snapbox = "0.6.23"
+url = "2.5.7"
+schemars = { version = "1.0.4", default-features = false, features = [
+    "std",
+    "derive",
+] }
+async-openai = { version = "0.30.1", default-features = false, features = [
+    "rustls",
+] }
+open = "5.3.2"
+regex = { version = "1.11.3", default-features = false, features = ["std", "unicode" ] }
+clap = { version = "4.5.51", default-features = false, features = ["derive", "std", "help"]}
+tracing-forest = { version = "0.3.0" }
+sysinfo = { version = "0.37.2", default-features = false }
 
 [profile.release]
-codegen-units = 1 # Compile crates one after another so the compiler can optimize better
-lto = true        # Enables link to optimizations
-opt-level = "s"   # Optimize for binary size
-debug = true      # Enable debug symbols, for sentry
+# There are no overrides here as we optimise for fast release builds,
+# which are used when building locally and when making Nightly builds.
+# The Stable release builds override the relevant settings at release time
+# to optimise for size.
 
-[workspace.lints.rust]
-unsafe_code = "forbid"
+[profile.bench]
+codegen-units = 256
+lto = false
+opt-level = 3
+debug = "line-tables-only"
 
-[workspace.lints.clippy]
-all = "deny"
-perf = "deny"
-correctness = "deny"
-complexity = "deny"
-style = "deny"
-pedantic = "deny"
+[profile.dev]
+incremental = false
+debug = "line-tables-only"
 
-# selection from clippy::restriction (see https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=restriction)
-as_underscore = "deny"
-assertions_on_result_states = "deny"
-clone_on_ref_ptr = "deny"
-create_dir = "deny"
-dbg_macro = "deny"
-decimal_literal_representation = "deny"
-default_numeric_fallback = "deny"
-empty_drop = "deny"
-empty_structs_with_brackets = "deny"
-exit = "deny"
-filetype_is_file = "deny"
-float_cmp_const = "deny"
-fn_to_numeric_cast_any = "deny"
-format_push_string = "deny"
-get_unwrap = "deny"
-integer_division = "deny"
-lossy_float_literal = "deny"
-mem_forget = "deny"
-mixed_read_write_in_expression = "deny"
-mutex_atomic = "deny"
-needless_raw_strings = "deny"
-non_ascii_literal = "deny"
-panic = "deny"
-print_stderr = "deny"
-pub_without_shorthand = "deny"
-rc_buffer = "deny"
-rc_mutex = "deny"
-redundant_type_annotations = "deny"
-ref_patterns = "deny"
-rest_pat_in_fully_bound_structs = "deny"
-same_name_method = "deny"
-string_add = "deny"
-string_lit_chars_any = "deny"
-string_slice = "deny"
-string_to_string = "deny"
-suspicious_xor_used_as_pow = "deny"
-todo = "deny"
-try_err = "deny"
-unimplemented = "deny"
-unnecessary_self_imports = "deny"
-unneeded_field_pattern = "deny"
-unseparated_literal_suffix = "deny"
-if_then_some_else_none = "deny"
-use_debug = "deny"
-mod_module_files = "deny"
-self_named_module_files = "allow"
-# TODO
-# partial_pub_fields = "deny"
-# print_stdout = "deny"
-# unwrap_used = "deny"
-# unwrap_in_result = "deny"
+[profile.test]
+incremental = false
 
-# noise and or false-positives
-missing_errors_doc = { level = "allow", priority = 1 }
-used_underscore_binding = { level = "allow", priority = 1 }
-must_use_candidate = { level = "allow", priority = 1 }
-module_name_repetitions = { level = "allow", priority = 1 }
-missing_panics_doc = { level = "allow", priority = 1 }
-too_many_lines = { level = "allow", priority = 1 }
-implicit_hasher = { level = "allow", priority = 1 }
-if_not_else = { level = "allow", priority = 1 }
-return_self_not_must_use = { level = "allow", priority = 1 }
-inconsistent_struct_constructor = { level = "allow", priority = 1 }
-match_wildcard_for_single_variants = { level = "allow", priority = 1 }
-unnested_or_patterns = { level = "allow", priority = 1 }
-similar_names = { level = "allow", priority = 1 }
-struct_field_names = { level = "allow", priority = 1 }
+# Assure that `gix` is always fast so debug builds aren't unnecessarily slow.
+[profile.dev.package]
+gix = { opt-level = 3 }
+gix-object = { opt-level = 3 }
+gix-ref = { opt-level = 3 }
+gix-pack = { opt-level = 3 }
+gix-hash = { opt-level = 3 }
+gix-actor = { opt-level = 3 }
+gix-config = { opt-level = 3 }
+sha1-checked = { opt-level = 3 }
+zlib-rs = { opt-level = 3 }
+serde = { opt-level = 3 }
+serde_json = { opt-level = 3 }
+# This one is special as we can run into debug assertions otherwise.
+# They have a time, but let's chose the time instead of always being hit by it.
+gix-merge = { opt-level = 3, debug-assertions = false }

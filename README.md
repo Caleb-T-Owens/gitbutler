@@ -1,29 +1,28 @@
 This is bs
 
 <div align="center">
-   <img align="center" width="128px" src="gitbutler-app/icons/128x128@2x.png" />
-	<h1 align="center"><b>GitButler</b></h1>
-	<p align="center">
-		Git branch management tool, built from the ground up for modern workflows
+  <img align="center" width="100%" src="./readme-preview.webp" />
+
+  <br />
+  <br />
+
+  <p align="center" >
+    Version Control tool built from the ground up for modern, AI-powered workflows.
     <br />
-    <a href="https://gitbutler.com"><strong>gitbutler.com »</strong></a>
     <br />
-    <br />
-    <b>Download for </b>
-    macOS (<a href="https://app.gitbutler.com/downloads/release/darwin/aarch64/dmg">Apple Silicon</a> |
-      <a href="https://app.gitbutler.com/downloads/release/darwin/x86_64/dmg">Intel</a>) ·
-		Linux (<a href="https://app.gitbutler.com/downloads/release/linux/x86_64/gz">AppImage</a> |
-       <a href="https://app.gitbutler.com/downloads/release/linux/x86_64/deb">deb</a>)
-    <br />
-    <i>~ Link for Windows will be added once a release is available. ~</i>
+    <a href="https://gitbutler.com">Website</a>
+    <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    <a href="https://blog.gitbutler.com/">Blog</a>
+    <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    <a href="https://docs.gitbutler.com/">Docs</a>
+    <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    <a href="https://gitbutler.com/downloads">Downloads</a>
   </p>
-</div>
 
-<br/>
+[![TWEET][s1]][l1] [
+![BLUESKY][s8]][l8 ] [![DISCORD][s2]][l2]
 
-![gitbutler_client](https://github.com/gitbutlerapp/gitbutler/assets/16262535/0d180bfd-7a3c-4a66-a923-30534c5a8197)
-
-[![CI][s0]][l0] [![BADGE][s6]][l6] [![TWEET][s1]][l1] [![DISCORD][s2]][l2] [![INSTA][s3]][l3] [![YOUTUBE][s5]][l5]
+[![CI][s0]][l0] [![INSTA][s3]][l3] [![YOUTUBE][s5]][l5] [![DEEPWIKI][s7]][l7]
 
 [s0]: https://github.com/gitbutlerapp/gitbutler/actions/workflows/push.yaml/badge.svg
 [l0]: https://github.com/gitbutlerapp/gitbutler/actions/workflows/push.yaml
@@ -35,10 +34,16 @@ This is bs
 [l3]: https://www.instagram.com/gitbutler/
 [s5]: https://img.shields.io/youtube/channel/subscribers/UCEwkZIHGqsTGYvX8wgD0LoQ
 [l5]: https://www.youtube.com/@gitbutlerapp
-[s6]: https://img.shields.io/badge/GitButler-%23B9F4F2?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAzOSAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI1LjIxNDUgMTIuMTk5N0wyLjg3MTA3IDEuMzg5MTJDMS41NDI5NSAwLjc0NjUzMiAwIDEuNzE0MDYgMCAzLjE4OTQ3VjI0LjgxMDVDMCAyNi4yODU5IDEuNTQyOTUgMjcuMjUzNSAyLjg3MTA3IDI2LjYxMDlMMjUuMjE0NSAxNS44MDAzQzI2LjcxOTcgMTUuMDcyMSAyNi43MTk3IDEyLjkyNzkgMjUuMjE0NSAxMi4xOTk3WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTEzLjc4NTUgMTIuMTk5N0wzNi4xMjg5IDEuMzg5MTJDMzcuNDU3MSAwLjc0NjUzMiAzOSAxLjcxNDA2IDM5IDMuMTg5NDdWMjQuODEwNUMzOSAyNi4yODU5IDM3LjQ1NzEgMjcuMjUzNSAzNi4xMjg5IDI2LjYxMDlMMTMuNzg1NSAxNS44MDAzQzEyLjI4MDMgMTUuMDcyMSAxMi4yODAzIDEyLjkyNzkgMTMuNzg1NSAxMi4xOTk3WiIgZmlsbD0idXJsKCNwYWludDBfcmFkaWFsXzMxMF8xMjkpIi8%2BCjxkZWZzPgo8cmFkaWFsR3JhZGllbnQgaWQ9InBhaW50MF9yYWRpYWxfMzEwXzEyOSIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxNi41NzAxIDE0KSBzY2FsZSgxOS44NjQxIDE5LjgzODMpIj4KPHN0b3Agb2Zmc2V0PSIwLjMwMTA1NiIgc3RvcC1vcGFjaXR5PSIwIi8%2BCjxzdG9wIG9mZnNldD0iMSIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8L2RlZnM%2BCjwvc3ZnPgo%3D
+[s7]: https://deepwiki.com/badge.svg
+[l7]: https://deepwiki.com/gitbutlerapp/gitbutler
+[s8]: https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff
+[l8]: https://bsky.app/profile/gitbutler.com
 
-[l6]: https://gitbutler.com/
+</div>
 
+<br/>
+
+![Alt](https://repobeats.axiom.co/api/embed/fb23382bcf57c609832661874d3019a43555d6ae.svg 'Repobeats analytics for GitButler')
 
 GitButler is a git client that lets you work on multiple branches at the same time.
 It allows you to quickly organize file changes into separate branches while still having them applied to your working directory.
@@ -75,6 +80,8 @@ GitButler is a [Tauri](https://tauri.app/)-based application. Its UI is written 
   - Automatically create new branches when needed
 - **Easy Commit Management**
   - Undo, Amend and Squash commits by dragging and dropping
+- **Undo Timeline**
+  - Logs all operations and changes and allows you to easily undo or revert any operation
 - **GitHub Integration**
   - Authenticate to GitHub to open Pull Requests, list branches and statuses and more
 - **Easy SSH Key Management**
@@ -83,7 +90,7 @@ GitButler is a [Tauri](https://tauri.app/)-based application. Its UI is written 
   - Automatically write commit messages based on your work in progress
   - Automatically create descriptive branch names
 - **Commit Signing**
-  - Easy commit signing with our generated SSH key
+  - Easy commit signing with GPG or SSH
 
 ## Example Uses
 
@@ -93,23 +100,23 @@ GitButler is a [Tauri](https://tauri.app/)-based application. Its UI is written 
 
 Using Git you can stash your changes and switch to another branch, where you can commit, and push your fix.
 
-*With GitButler* you simply assign your fix to a separate virtual branch, which you can individually push (or directly create a PR). An additional benefit is that you can retain the fix in your working directory while waiting for CI and/or code review.
+_With GitButler_ you simply assign your fix to a separate virtual branch, which you can individually push (or directly create a PR). An additional benefit is that you can retain the fix in your working directory while waiting for CI and/or code review.
 
 ### Trying Someone Else's Branch Together With My Work in Progress
 
 > Say you want to test a branch from someone else for the purpose of code review.
 
 Using Git trying out someone else's branch is a full context switch away from your own work.
-*With GitButler* you can apply and unapply (add / remove) any remote branch directly into your working directory.
+_With GitButler_ you can apply and unapply (add / remove) any remote branch directly into your working directory.
 
 ## Documentation
 
-You can find our end user documentation at: https://docs.gitbutler.com
+You can find our end user documentation at: <https://docs.gitbutler.com>
 
 ## Bugs and Feature Requests
 
 If you have a bug or feature request, feel free to open an [issue](https://github.com/gitbutlerapp/gitbutler/issues/new),
-or [join our Discord server](https://discord.gg/wDKZCPEjXC).
+or [join our Discord server](https://discord.gg/MmFkmaJ42D).
 
 ## AI Commit Message Generation
 
@@ -127,9 +134,8 @@ document.
 If you want to skip right to getting the code to actually compile, take a look
 at the [DEVELOPMENT.md](DEVELOPMENT.md) file.
 
-Want to show your support? Add a GitButler badge to your project's README:
-```md
-[![GitButler](https://img.shields.io/badge/GitButler-%23B9F4F2?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAzOSAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI1LjIxNDUgMTIuMTk5N0wyLjg3MTA3IDEuMzg5MTJDMS41NDI5NSAwLjc0NjUzMiAwIDEuNzE0MDYgMCAzLjE4OTQ3VjI0LjgxMDVDMCAyNi4yODU5IDEuNTQyOTUgMjcuMjUzNSAyLjg3MTA3IDI2LjYxMDlMMjUuMjE0NSAxNS44MDAzQzI2LjcxOTcgMTUuMDcyMSAyNi43MTk3IDEyLjkyNzkgMjUuMjE0NSAxMi4xOTk3WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTEzLjc4NTUgMTIuMTk5N0wzNi4xMjg5IDEuMzg5MTJDMzcuNDU3MSAwLjc0NjUzMiAzOSAxLjcxNDA2IDM5IDMuMTg5NDdWMjQuODEwNUMzOSAyNi4yODU5IDM3LjQ1NzEgMjcuMjUzNSAzNi4xMjg5IDI2LjYxMDlMMTMuNzg1NSAxNS44MDAzQzEyLjI4MDMgMTUuMDcyMSAxMi4yODAzIDEyLjkyNzkgMTMuNzg1NSAxMi4xOTk3WiIgZmlsbD0idXJsKCNwYWludDBfcmFkaWFsXzMxMF8xMjkpIi8%2BCjxkZWZzPgo8cmFkaWFsR3JhZGllbnQgaWQ9InBhaW50MF9yYWRpYWxfMzEwXzEyOSIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxNi41NzAxIDE0KSBzY2FsZSgxOS44NjQxIDE5LjgzODMpIj4KPHN0b3Agb2Zmc2V0PSIwLjMwMTA1NiIgc3RvcC1vcGFjaXR5PSIwIi8%2BCjxzdG9wIG9mZnNldD0iMSIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8L2RlZnM%2BCjwvc3ZnPgo%3D
-)](https://gitbutler.com/)
-```
-[![BADGE][s6]][l6]
+### Contributors
+
+<a href="https://github.com/gitbutlerapp/gitbutler/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gitbutlerapp/gitbutler" />
+</a>
